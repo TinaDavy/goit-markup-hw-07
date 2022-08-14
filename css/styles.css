@@ -692,14 +692,14 @@ transition: color var(--animation);
 }
 
 /* Filters */
-.filters-list {
+.filters {
     display: flex;
     gap: 8px;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-.project-btn {
+.filters__btn {
     min-height: 38px;
     padding: 6px 22px;
 
@@ -711,25 +711,39 @@ transition: color var(--animation);
     transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 }
 
-.project-btn-current {
+.filters__btn:hover,
+.filters__btn:focus {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filters__btn--current {
     color: var(--white-color);
     background-color: var(--accent-color);
 
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.project-btn:hover,
-.project-btn:focus {
-    color: var(--white-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
 
 /* Projects */
-.projects-list {
+.projects {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+}
+
+.projects__link {
+    transition: box-shadow var(--animation);
+}
+
+.projects__link:hover .overlay {
+    transform: translateY(0%);
+}
+
+.projects__link:hover,
+.projects__link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .overlay-wrapper {
@@ -758,7 +772,7 @@ transition: color var(--animation);
     transition: transform var(--animation);
 }
 
-.overlay-text {
+.overlay__text {
     font-weight: 400;
     font-size: 18px;
     line-height: calc(28 / 18);
@@ -767,19 +781,6 @@ transition: color var(--animation);
     color: var(--white-color);
 
     user-select: none;
-}
-
-.projects-link {
-    transition: box-shadow var(--animation);
-}
-
-.projects-link:hover .overlay{
-    transform: translateY(0%);
-}
-
-.projects-link:hover,
-.projects-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-wrapper {
@@ -791,7 +792,7 @@ transition: color var(--animation);
     border-top: none;
 }
 
-.project-title {
+.project-wrapper__title {
     margin-bottom: 4px;
 
     color: var(--title-color);
@@ -801,61 +802,12 @@ transition: color var(--animation);
     letter-spacing: 0.06em;
 }
 
-.project-type {
+.project-wrapper__type {
     font-size: 16px;
     line-height: calc(30 / 16);
     letter-spacing: 0.03em;
     font-weight: 400;
 }
-
-/* Socials icons */
-.socials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.socials-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 44px;
-    height: 44px;
-
-    color: var(--icons-color);
-    background-color: var(--white-color);
-    border-radius: 50%;
-
-    transition: background-color var(--animation), color var(--animation);
-}
-
-.socials-icon {
-    fill: currentColor;
-}
-
-.socials-link:hover,
-.socials-link:focus,
-.socials-footer-link:hover,
-.socials-footer-link:focus {
-    background-color: var(--accent-color);
-    color: var(--white-color);
-}
-
-
-/* спосіб з вказанням fill для іконки */
-/* .socials-icon {
-    fill: var(--icons-color);
-} 
-.socials-link:hover {
-    background-color: var(--accent-color);
-}
-
-.socials-link:hover .socials-icon {
-    fill: var(--white-color);
-} */
-
 
 /* Modal window */
 .backdrop {
@@ -872,7 +824,7 @@ transition: color var(--animation);
     transition: opacity var(--animation), visibility var(--animation);
 }
 
-.backdrop.is-hidden {
+.backdrop--is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -897,12 +849,12 @@ transition: color var(--animation);
     transition: transform var(--animation) 150ms, opacity var(--animation) 150ms, scale var(--animation) 150ms;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop--is-hidden .modal {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.3);
 }
 
-.modal-btn {
+.modal__btn {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -920,13 +872,13 @@ transition: color var(--animation);
     cursor: pointer
 }
 
-.modal-btn:hover  .modal-btn-icon,
-.modal-btn:focus .modal-btn-icon {
+.modal__btn:hover  .modal__btn-icon,
+.modal__btn:focus .modal__btn-icon {
     fill: var(--accent-color);
 }
 
 /* Modal-form */
-.register-form-title {
+.register-form__title {
     display: block;
     margin-bottom: 12px;
 
@@ -943,19 +895,19 @@ transition: color var(--animation);
     margin-bottom: 20px;
 }
 
-.register-form-wrap {
+.register-form-group__wrap {
     position: relative;
     display: block;
 
     margin-bottom: 10px;
 }
 
-.register-form-wrap:last-child {
+.register-form-group__wrap:last-child {
     margin-bottom: 0;
     height: 138px;
 }
 
-.register-form-label {
+.register-form-group__label {
     display: block;
     margin-bottom: 4px;
 
@@ -965,8 +917,7 @@ transition: color var(--animation);
     letter-spacing: 0.01em;
 }
 
-.register-form-input,
-.register-form-message {
+.register-form-group__input {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
@@ -979,23 +930,14 @@ transition: color var(--animation);
     transition: var(--animation);
 }
 
-.register-form-input:focus,
-.register-form-message:focus {
+.register-form-group__input:focus {
     border: 1px solid #2196F3;
     outline: transparent;
 
     transform: border, color;
 }
 
-.register-form-message::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.01em;
-    color: var(--placeholder-color);
-}
-
-.register-form-icon {
+.register-form-group__icon {
     position: absolute;
     bottom: 11px;
     left: 12px;
@@ -1004,19 +946,44 @@ transition: color var(--animation);
     transition: var(--animation);
 }
 
-.register-form-input:focus + .register-form-icon {
+.register-form-group__input:focus+.register-form-group__icon {
     fill: var(--accent-color);
     transform: fill;
 }
 
-.register-form-message {
-    height: 120px;
-    resize: none;
+.register-form-group__message {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
 
+    height: 120px;
+    width: 100%;
+    padding-left: 42px;
+
+    resize: none;
     padding: 12px 16px;
+
+    outline: transparent;
+
+    transition: var(--animation);
 }
 
-.register-form-agreement {
+.register-form-group__message::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: var(--placeholder-color);
+}
+
+.register-form-group__message:focus {
+    border: 1px solid #2196F3;
+    outline: transparent;
+
+    transform: border, color;
+}
+
+
+.register-form__agreement {
     position: relative;
     display: flex;
     align-items: center;
@@ -1025,29 +992,31 @@ transition: color var(--animation);
     margin-bottom: 30px;
 }
 
-.register-form-agreement-text {
+.register-form__icon {
+    width: 16px;
+    height: 15px;
+    background-image: url(../images/icons/icon-box.svg);
+}
+
+.register-form__checkbox:checked:focus+.register-form__icon {
+    background-image: url(../images/icons/icon-check.svg);
+}
+
+.register-form__text {
     font-weight: 400;
     font-size: 14px;
     line-height: calc(24 / 12);
     letter-spacing: 0.03em;
 }
 
-.register-form-agreement-link {
+.register-form__link {
     display: inline;
     color: var(--accent-color);
 }
 
-.icon-checkbox {
-    width: 16px;
-    height: 15px;
-    background-image: url(../images/icons/icon-box.svg);
-}
 
-.register-checkbox:checked:focus + .icon-checkbox {
-    background-image: url(../images/icons/icon-check.svg);
-}
 
-.register-form-btn {
+.register-form__btn {
     display: block;
     min-width: 200px;
     min-height: 50px;
@@ -1071,7 +1040,7 @@ transition: color var(--animation);
     transition: background-color var(--animation);
 }
 
-.register-form-btn:hover {
+.register-form__btn:hover {
     background-color: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

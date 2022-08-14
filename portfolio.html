@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+    <!-- Normalize start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- Normalize end -->
+    <!-- Fonts stars -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fonts end -->
+    <!-- Custom styles start -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Custom styles end -->
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WebStudio</title>
-  <!-- Normalize start -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
-  <!-- Normalize end -->
-  <!-- Fonts stars -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-    rel="stylesheet" />
-  <!-- Fonts end -->
-  <!-- Custom styles start -->
-  <link rel="stylesheet" href="./css/styles.css" />
-  <!-- Custom styles end -->
-</head>
-
-<body>
-  <!-- Header section -->
+  <body>
+    <!-- Header section -->
     <header class="header">
       <div class="container header__container">
         <a class="header__logo logo link" href="./index.html"
@@ -63,183 +66,240 @@
         </ul>
       </div>
     </header>
-  <!-- Main section -->
-  <main>
-    <section class="main-section section">
-      <div class="container">
-        <!-- Filters -->
-        <h1 class="visually-hidden">Проєкти</h1>
-        <ul class="filters-list list">
-          <li><button class="project-btn project-btn-current btn" type="button">Все</button></li>
-          <li><button class="project-btn btn" type="button">Веб-сайти</button></li>
-          <li><button class="project-btn btn" type="button">Додатки</button></li>
-          <li><button class="project-btn btn" type="button">Дизайн</button></li>
-          <li><button class="project-btn btn" type="button">Маркетинг</button></li>
-        </ul>
-        <!-- Projects -->
-        <h2 class="visually-hidden">Карточки проєктів</h2>
-        <ul class="projects-list list">
-          <li class="projects-item">
-            <a class="projects-link link" href="">
-              <div class="overlay-wrapper">
-                <img src="./images/portfolio-html/project-1.jpg" alt="Ноутбук" width="370" height="294" />
-                <div class="overlay">
-                  <p class="overlay-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
+    <!-- Main section -->
+    <main>
+      <section class="main-section section">
+        <div class="container">
+          <!-- Filters -->
+          <h1 class="visually-hidden">Проєкти</h1>
+          <ul class="filters list">
+            <li>
+              <button class="filters__btn filters__btn--current btn" type="button">Все</button>
+            </li>
+            <li><button class="filters__btn btn" type="button">Веб-сайти</button></li>
+            <li><button class="filters__btn btn" type="button">Додатки</button></li>
+            <li><button class="filters__btn btn" type="button">Дизайн</button></li>
+            <li><button class="filters__btn btn" type="button">Маркетинг</button></li>
+          </ul>
+          <!-- Projects -->
+          <h2 class="visually-hidden">Карточки проєктів</h2>
+          <ul class="projects list">
+            <li class="projects__item">
+              <a class="projects__link link" href="">
+                <div class="overlay-wrapper">
+                  <img
+                    src="./images/portfolio-html/project-1.jpg"
+                    alt="Ноутбук"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="project-wrapper">
-                <h3 class="project-title">Технокряк</h3>
-                <p class="project-type">Веб-сайт</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a class="projects-link link" href="">
-              <div class="overlay-wrapper">
-                <img src="./images/portfolio-html/project-2.jpg" alt="Постер з бейсболістами" width="370"
-                  height="294" />
-                <div class="overlay">
-                  <p class="overlay-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
+                <div class="project-wrapper">
+                  <h3 class="project-wrapper__title">Технокряк</h3>
+                  <p class="project-wrapper__type">Веб-сайт</p>
                 </div>
-              </div>
-              <div class="project-wrapper">
-                <h3 class="project-title">
-                  Постер <span lang="en">New Orlean vs Golden Star</span>
-                </h3>
-                <p class="project-type">Дизайн</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a class="projects-link link" href="">
-              <div class="overlay-wrapper">
-                <img src="./images/portfolio-html/project-3.jpg" alt="Лого ресторану" width="370" height="294" />
-                <div class="overlay">
-                  <p class="overlay-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link link" href="">
+                <div class="overlay-wrapper">
+                  <img
+                    src="./images/portfolio-html/project-2.jpg"
+                    alt="Постер з бейсболістами"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="project-wrapper">
-                <h3 class="project-title">Ресторан <span lang="en">Seafood</span></h3>
-                <p class="project-type">Додаток</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a class="projects-link link" href="">
-              <div class="overlay-wrapper">
-                <img src="./images/portfolio-html/project-4.jpg" alt="Навушники" width="370" height="294" />
-                <div class="overlay">
-                  <p class="overlay-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
+                <div class="project-wrapper">
+                  <h3 class="project-wrapper__title">
+                    Постер <span lang="en">New Orlean vs Golden Star</span>
+                  </h3>
+                  <p class="project-wrapper__type">Дизайн</p>
                 </div>
-              </div>
-              <div class="project-wrapper">
-                <h3 class="project-title">Проєкт <span lang="en">Prime</span></h3>
-                <p class="project-type">Маркетинг</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a class="projects-link link" href="">
-              <div class="overlay-wrapper">
-                <img src="./images/portfolio-html/project-5.jpg" alt="Дві коробки" width="370" height="294" />
-                <div class="overlay">
-                  <p class="overlay-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link link" href="">
+                <div class="overlay-wrapper">
+                  <img
+                    src="./images/portfolio-html/project-3.jpg"
+                    alt="Лого ресторану"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="project-wrapper">
-                <h3 class="project-title">Проєкт <span lang="en">Boxes</span></h3>
-                <p class="project-type">Додаток</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <div class="overlay-wrapper">
-              <a class="projects-link link" href="">
-                <img src="./images/portfolio-html/project-6.jpg" alt="Монітор" width="370" height="294" />
-                <div class="overlay">
-                  <p class="overlay-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
+                <div class="project-wrapper">
+                  <h3 class="project-wrapper__title">Ресторан <span lang="en">Seafood</span></h3>
+                  <p class="project-wrapper__type">Додаток</p>
                 </div>
-            </div>
-            <div class="project-wrapper">
-              <h3 class="project-title" lang="en">Inspiration has no Borders</h3>
-              <p class="project-type">Веб-сайт</p>
-            </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a class="projects-link link" href="">
-              <div class="overlay-wrapper">
-                <img src="./images/portfolio-html/project-7.jpg" alt="Розворот журналу" width="370" height="294" />
-                <div class="overlay">
-                  <p class="overlay-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link link" href="">
+                <div class="overlay-wrapper">
+                  <img
+                    src="./images/portfolio-html/project-4.jpg"
+                    alt="Навушники"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="project-wrapper">
-                <h3 class="project-title">Видання <span lang="en">Limited Edition</span></h3>
-                <p class="project-type">Дизайн</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a class="projects-link link" href="">
-              <div class="overlay-wrapper">
-                <img src="./images/portfolio-html/project-8.jpg" alt="Ярлик" width="370" height="294" />
-                <div class="overlay">
-                  <p class="overlay-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
+                <div class="project-wrapper">
+                  <h3 class="project-wrapper__title">Проєкт <span lang="en">Prime</span></h3>
+                  <p class="project-wrapper__type">Маркетинг</p>
                 </div>
-              </div>
-              <div class="project-wrapper">
-                <h3 class="project-title">Проєкт <span>LAB</span></h3>
-                <p class="project-type">Маркетинг</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects-item">
-            <a class="projects-link link" href="">
-              <div class="overlay-wrapper">
-                <img src="./images/portfolio-html/project-9.jpg" alt="Робота за ноутбуком" width="370" height="294" />
-                <div class="overlay">
-                  <p class="overlay-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link link" href="">
+                <div class="overlay-wrapper">
+                  <img
+                    src="./images/portfolio-html/project-5.jpg"
+                    alt="Дві коробки"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="project-wrapper">
-                <h3 class="project-title" lang="en">Growing Business</h3>
-                <p class="project-type">Додаток</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <!-- Footer section -->
+                <div class="project-wrapper">
+                  <h3 class="project-wrapper__title">Проєкт <span lang="en">Boxes</span></h3>
+                  <p class="project-wrapper__type">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link link" href="">
+                <div class="overlay-wrapper">
+                  <img
+                    src="./images/portfolio-html/project-6.jpg"
+                    alt="Монітор"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="project-wrapper">
+                  <h3 class="project-wrapper__title" lang="en">Inspiration has no Borders</h3>
+                  <p class="project-wrapper__type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link link" href="">
+                <div class="overlay-wrapper">
+                  <img
+                    src="./images/portfolio-html/project-7.jpg"
+                    alt="Розворот журналу"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="project-wrapper">
+                  <h3 class="project-wrapper__title">
+                    Видання <span lang="en">Limited Edition</span>
+                  </h3>
+                  <p class="project-wrapper__type">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link link" href="">
+                <div class="overlay-wrapper">
+                  <img
+                    src="./images/portfolio-html/project-8.jpg"
+                    alt="Ярлик"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="project-wrapper">
+                  <h3 class="project-wrapper__title">Проєкт <span>LAB</span></h3>
+                  <p class="project-wrapper__type">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a class="projects__link link" href="">
+                <div class="overlay-wrapper">
+                  <img
+                    src="./images/portfolio-html/project-9.jpg"
+                    alt="Робота за ноутбуком"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
+                      приватну особу.
+                    </p>
+                  </div>
+                </div>
+                <div class="project-wrapper">
+                  <h3 class="project-wrapper__title" lang="en">Growing Business</h3>
+                  <p class="project-wrapper__type">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- Footer section -->
     <footer class="footer" id="contacts">
       <div class="container">
         <div class="footer__box">
@@ -346,6 +406,5 @@
         </div>
       </div>
     </footer>
-</body>
-
+  </body>
 </html>
